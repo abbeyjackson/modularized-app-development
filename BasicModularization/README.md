@@ -3,7 +3,8 @@
 The workspace found in this directory has been created as supplemental material for my talk  
 "Modularize All The Things".
   
-You can find the slides and recordings for this talk, as well as other talks I have done, on my website   [https://abgl.ca/talks](https://www.abbeyjackson.ca).
+You can find the slides and recordings for this talk, as well as other talks I have done, on my website  
+[https://www.abbeyjackson.ca](https://abgl.ca/talks).
 
 For supplemental reading on this topic (which I did not write) please look at the last one or two slides on the pdf.
   
