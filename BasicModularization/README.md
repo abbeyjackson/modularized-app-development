@@ -21,7 +21,7 @@ This directory contains a workspace. Inside that workspace is an app and three m
 
 The modules demonstrate encapsulating features and passing data between modules using protocols. There are other methods you could use but protocols are usually the best choice for swift modules/projects. Another good method of sharing data between modules, which Apple uses extensively, is the delegate pattern. However that is not demonstrated.
 
-This project is set up with the hopes to be as entry level as possible. For that reason storyboards and segues are used. I assume that if you develop without storyboards you should be at such a level that you can figure out what you need to do in order to use programmatic UI instead of storyboards. Additionally there is one use of Codable and also you will see dictionary parsing to mimic the good old fashioned json parsing we had to do before Codable. I originally was not going to use Codable at all because I wanted to be as entry level as possible and many people will not know how to use Codable yet however for time's savings I caved and used it in one location. If you are a new learning and you are confused please don't hesitate to reach out!
+This project is set up with the hopes to be as entry level as possible. For that reason storyboards and segues are used. I assume that if you develop without storyboards you should be at such a level that you can figure out what you need to do in order to use programmatic UI instead of storyboards. Additionally there is one use of Codable and also you will see dictionary parsing to mimic the good old fashioned json parsing we had to do before Codable. I originally was not going to use Codable at all because I wanted to be as entry level as possible and many people will not know how to use Codable yet however for time's savings I caved and used it in one location. If you are a new learner and you are confused please don't hesitate to reach out!
 
 ## How to Interact with Modules
 
@@ -31,10 +31,10 @@ It's actually really straight forward: In our app itself we have an extension on
 
 You may be tempted to modify the `User` class directly inside the `UserData` module however doing that would negate everything you gain by modularization. The power of modularization is being able to develop features independent of each other (which allows for reusability and better testing). When you are trying to determine how to get modules to interact with each other try to think of ways to abstract those layers apart rather than having them communicate directly. This could be achieved with view models in your app or simply extensions - again, in your app. 
 
-Think of your app as the place where everything is connected and with that in mind as yourself "what can I do to connect these?"
+Think of your app as the place where everything is connected and with that in mind ask yourself "what can I do to connect these?"
 
 ## Testing
 
-In the  `UserData` test target there is a demonstration of how you can access internal functionality on unrelated modules. This demonstration is there as a warning. I absolutely _do not_ recommend doing this on purpose. Doing so would violate unit testing principles.
+In the  `UserData` test target there is a demonstration of how you can access internal functionality on unrelated modules. This demonstration is there as a warning. I absolutely _do not_ recommend doing this on purpose. Doing so would violate unit testing principles. If the modules do not know about each other in the project space they should not know about each other in the test space either.
 
 Additionally an aggregate target on the app has been added and named "Workspace Testing" and is there to demonstrate one way of setting up your test targets. Please read the comment in the runscript phase of that target for more information.
