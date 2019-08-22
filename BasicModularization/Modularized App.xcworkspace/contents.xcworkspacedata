@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "container:ModularizedApp/ModularizedApp.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:UserData/UserData.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Networking/Networking.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Persistence/Persistence.xcodeproj">
+   </FileRef>
+</Workspace>
